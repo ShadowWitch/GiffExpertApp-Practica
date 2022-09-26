@@ -16,6 +16,7 @@ export const AddCategory = ({onNewCategory}) => {
 
     return (
         <form
+            // className="form_gifs"
             onSubmit={onSubmit}
         >
             <input 

@@ -1,9 +1,11 @@
 import { useState } from "react"
-import { AddCategory } from "./AddCategory"
-import { GifGrid } from "./GifGrid"
+// import { AddCategory } from "./components/AddCategory"
+// import { GifGrid } from "./components/GifGrid"
+
+import {AddCategory, GifGrid} from './components/index.barril';
 
 export const GifExpertApp = () => {
-    const [categories, setCategories] = useState(['Naruto'])
+    const [categories, setCategories] = useState([])
 
     const onAddCategory = (newCategory) => {
         if(categories.includes(newCategory)) return alert('Ya existe');
@@ -11,8 +13,6 @@ export const GifExpertApp = () => {
         // setCategories(['Hola mundo', ...categories])
         // setCategories(cat => [...cat, 'Hola mundo'])
     }
-
-    const arr1 = [1, 2, 3]
 
     return (
         <>

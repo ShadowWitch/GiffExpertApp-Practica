@@ -11,6 +11,7 @@ export const useFetchGifs = (category) => {
         const newImages = await getGif(category);
         setImages(newImages);
         setIsLoading(false);
+        // console.log(isLoading);
     }
     
     useEffect(() => {
@@ -20,7 +21,9 @@ export const useFetchGifs = (category) => {
 
 
     return {
-        images: images,
-        isLoading: isLoading
+        // images: images,
+        // isLoading: isLoading
+        images,
+        isLoading
     }
 }

@@ -12,6 +12,12 @@ export const GifGrid = ({category}) =>{
         <>
             <div>
                 <h3>{category}</h3>
+                {/* {
+                    isLoading ? (<h2>Cargando...</h2>) : null
+                } */}
+                {
+                    isLoading && (<h2>Cargando...</h2>) // Si estra en "true"
+                }
                 <div className='card-grid'>
                     {
                         images.map( image => (
@@ -23,7 +29,6 @@ export const GifGrid = ({category}) =>{
                         ))
                     }
                 </div>
-                
             </div>
         </>
     )
