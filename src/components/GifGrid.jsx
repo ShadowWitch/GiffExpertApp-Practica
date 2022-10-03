@@ -8,9 +8,8 @@ import PropTypes from 'prop-types';
 export const GifGrid = ({category}) =>{
 
     const {images, isLoading} = useFetchGifs(category)
-
-    console.log(category)
-    console.log(typeof category);
+    // console.log(category)
+    // console.log(typeof category);
 
     return (
         <>
@@ -36,4 +35,8 @@ export const GifGrid = ({category}) =>{
             </div>
         </>
     )
+}
+
+GifGrid.propTypes = {
+    category: PropTypes.string.isRequired
 }

@@ -10,6 +10,9 @@ export const useFetchGifs = (category) => {
     const getImages = async () =>{
         const newImages = await getGif(category);
         setImages(newImages);
+        // console.log('Imagenes >> ', images)
+        // console.log('isLoading >> ', isLoading)
+
         setIsLoading(false);
         // console.log(isLoading);
     }
@@ -18,7 +21,6 @@ export const useFetchGifs = (category) => {
         // getGif(category)
         getImages()
     }, []) // Si dejamos ese arreglo vacio, quiere decir que lo que esta dentro del "{}" solo se disparara una sola vez cuando se renderize el componente...
-
 
     return {
         // images: images,
